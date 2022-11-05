@@ -11,7 +11,25 @@ https://personal-code-search.herokuapp.com/
 ## Environment variables:
 
 ```java
+PCS_AWS_ACCESS_KEY=
+PCS_AWS_SECRET_KEY=
+PCS_AWS_REGION=
+PCS_AWS_BUCKET_NAME=
 
+MONGODB_USER_NAME=
+MONGODB_PASSWORD=
+MONGODB_DATABASE=
+
+PCS_MONGODB_URI=mongodb+srv://$MONGODB_USER_NAME:$MONGODB_PASSWORD@cluster0.jew2r.mongodb.net/$MONGODB_DATABASE?retryWrites=true&w=majority
+
+NEXT_PUBLIC_FIREBASE_API_KEY=
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=
+NEXT_PUBLIC_FIREBASE_SENDER_ID=
+NEXT_PUBLIC_FIREBASE_APP_ID=
+
+# Allowed email list for the google authentication
+# You must split with ',' like email@gmail.com,email2@gmail.com
+NEXT_PUBLIC_ALLOW_EMAILS=
 ```
 
 ## GitHub
