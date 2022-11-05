@@ -1,10 +1,11 @@
 {
-  "name": "nextjs",
+  "name": "personal-code-search-nextjs-s3-firebase",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "deploy": "git add . && git commit -m Build && git push",
     "start": "next start -p $PORT"
   },
   "dependencies": {

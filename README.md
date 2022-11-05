@@ -1,9 +1,37 @@
+# personal-code-search-nextjs-s3-firebase
+
+# 🚀 Categorize all your favorite code snippets and search them with predefined tags on your own. 🚀
+
+https://github.com/coding-to-music/personal-code-search-nextjs-s3-firebase
+
+From / By https://github.com/Abdulsametileri/personal-code-search-nextjs
+
+https://personal-code-search.herokuapp.com/
+
+## Environment variables:
+
+```java
+
+```
+
+## GitHub
+
+```java
+git init
+git add .
+git remote remove origin
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:coding-to-music/personal-code-search-nextjs-s3-firebase.git
+git push -u origin main
+```
+
 ### Motivation
 
-If you are preparing tech interviews you should solve the algorithm problems in 
-hackerrank, leetcode and so on (what platform you prefer). Some questions and solutions 
-gives you really good point. Also you may learn new things to use by looking the other 
-solutions. Sometimes you want to remember the code snippets seen before. 
+If you are preparing tech interviews you should solve the algorithm problems in
+hackerrank, leetcode and so on (what platform you prefer). Some questions and solutions
+gives you really good point. Also you may learn new things to use by looking the other
+solutions. Sometimes you want to remember the code snippets seen before.
 
 **This project may give you a solution.**
 
@@ -24,11 +52,11 @@ So you can fork the project build on your own.
 
 You can search `bitwise`, `tree` or `sql` for see filtering functionality.
 
-Code snippets is displayed `perPage = 5` as default. 
+Code snippets is displayed `perPage = 5` as default.
 You can use pagination functionality at the bottom of the page.
 
-**You cannot add the code snippet with `Add Code Snippets` link because 
-you don't have authentication. This is just a demo for you.** 
+**You cannot add the code snippet with `Add Code Snippets` link because
+you don't have authentication. This is just a demo for you.**
 
 `Add Code Snippets` is a basic post page. This is what its look like.
 ![](images/addCodeSnippet.png)
@@ -37,7 +65,7 @@ you don't have authentication. This is just a demo for you.**
 
 You can follow to `.env.example` set your own credentials.
 
-``` 
+```
 PCS_AWS_ACCESS_KEY=
 PCS_AWS_SECRET_KEY=
 PCS_AWS_REGION=
@@ -76,20 +104,20 @@ const CodeSchema = new mongoose.Schema({
   tag: {
     /* Snippet tag for searching purposes */
     type: String,
-    required: [true, 'Tag can\'t be empty']
+    required: [true, "Tag can't be empty"],
   },
   description: {
     /* Snippet description to understand better */
     type: String,
   },
-})
+});
 
-export default mongoose.models['Code'] || mongoose.model('Code', CodeSchema);
+export default mongoose.models["Code"] || mongoose.model("Code", CodeSchema);
 ```
 
-The main idea of 
-the `tag` field is searching and 
-the `description` field is to provide better understanding 
+The main idea of
+the `tag` field is searching and
+the `description` field is to provide better understanding
 for the snippet.
 
 If you want to upload the code as `rawText` not the image you can leave blank the
@@ -97,28 +125,28 @@ If you want to upload the code as `rawText` not the image you can leave blank th
 
 You can look the paginaton and filtering at pages/api/paginateCodeSnippets.js
 
-``` javascript
-let filter = {}
+```javascript
+let filter = {};
 
 if (keyword !== "") {
   const rgx = (pattern) => new RegExp(`.*${pattern}.*`);
   const searchRgx = rgx(keyword);
   filter = {
     $or: [
-      {tag: {$regex: searchRgx, $options: "i"}},
-      {description: {$regex: searchRgx, $options: "i"}},
+      { tag: { $regex: searchRgx, $options: "i" } },
+      { description: { $regex: searchRgx, $options: "i" } },
     ],
-  }
+  };
 }
 
 const codeSnippets = await Code.find(filter)
   .skip((curPage - 1) * perPage)
   .limit(perPage)
-  .sort({"_id": -1})
+  .sort({ _id: -1 });
 ```
 
 Run continiously
+
 ```sleep
 for i in {1..100}; do echo $i && curl "https://personal-code-search.herokuapp.com/" >> /tmp/output.log && sleep 300; done
 ```
-
