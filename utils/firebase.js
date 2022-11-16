@@ -1,8 +1,8 @@
 import firebase from "firebase/app";
 
-let cached = global.firebaseApp
+let cached = global.firebaseApp;
 if (!cached) {
-  cached = global.firebaseApp = connectFirebase()
+  cached = global.firebaseApp = connectFirebase();
 }
 
 function connectFirebase() {
@@ -12,6 +12,7 @@ function connectFirebase() {
     projectId: `${process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID}`,
     storageBucket: `${process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID}.appspot.com`,
     messagingSenderId: `${process.env.NEXT_PUBLIC_FIREBASE_SENDER_ID}`,
-    appId: `${process.env.NEXT_PUBLIC_FIREBASE_APP_ID}`
+    appId: `${process.env.NEXT_PUBLIC_FIREBASE_APP_ID}`,
+    measurementId: `${process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID}`,
   });
 }
