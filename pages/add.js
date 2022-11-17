@@ -85,6 +85,8 @@ const add = () => {
     };
 
     if (!data.rawText || data.rawText === "") {
+      console.log("add.js ater postData: data", data);
+
       const imageS3Url = await UploadCodeImageToS3(data.image[0]);
       if (imageS3Url === "") {
         ShowErrorMessage("Error occuring during upload the image to s3.");
