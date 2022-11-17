@@ -9,6 +9,7 @@
     "start": "next start -p $PORT"
   },
   "dependencies": {
+    "@firebase/analytics": "^0.8.4",
     "aws-sdk": "^2.896.0",
     "bootstrap": "^5.0.0-beta3",
     "firebase": "^8.4.3",
