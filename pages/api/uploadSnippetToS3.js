@@ -24,7 +24,7 @@ export default async (req, res) => {
   });
   const s3 = new aws.S3();
 
-  console.log("uploadSnippetToS3: s3", s3);
+  // console.log("uploadSnippetToS3: s3", s3);
 
   const form = new formidable.IncomingForm();
   form.parse(req, async (err, fields, files) => {
