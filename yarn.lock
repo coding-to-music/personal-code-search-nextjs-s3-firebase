@@ -2982,6 +2982,11 @@ react-firebaseui@^5.0.2:
   dependencies:
     firebaseui "^4.8.0"
 
+react-ga@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.npmjs.org/react-ga/-/react-ga-3.3.1.tgz"
+  integrity sha512-4Vc0W5EvXAXUN/wWyxvsAKDLLgtJ3oLmhYYssx+YzphJpejtOst6cbIHCIyF50Fdxuf5DDKqRYny24yJ2y7GFQ==
+
 react-hook-form@^7.3.6:
   version "7.3.6"
   resolved "https://registry.npmjs.org/react-hook-form/-/react-hook-form-7.3.6.tgz"
