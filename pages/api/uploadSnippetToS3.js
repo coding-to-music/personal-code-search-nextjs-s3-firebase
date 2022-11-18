@@ -47,6 +47,8 @@ export default async (req, res) => {
       files.file.type
     );
 
+    console.log("s3.upload about to ");
+
     s3.upload({
       Bucket: process.env.PCS_AWS_BUCKET_NAME,
       ACL: "public-read",
@@ -55,8 +57,10 @@ export default async (req, res) => {
       ContentType: files.file.type,
     }).send((err, data) => {
       if (err) {
+        console.log("s3.upload: err: return res.status(500) ");
         return res.status(500);
       }
+      console.log("s3.upload: success: return data ", data);
       if (data) {
         return res.json({
           imageUrl: data.Location,
