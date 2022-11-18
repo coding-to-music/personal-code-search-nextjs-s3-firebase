@@ -51,13 +51,15 @@ export default async (req, res) => {
 
     s3.upload({
       Bucket: process.env.PCS_AWS_BUCKET_NAME,
+      Bucket: process.env.PCS_AWS_ACCESS_KEY,
+      Bucket: process.env.PCS_AWS_SECRET_KEY,
       ACL: "public-read",
       Key: files.file.name,
       Body: file,
       ContentType: files.file.type,
     }).send((err, data) => {
       if (err) {
-        console.log("s3.upload: err: return res.status(500) ");
+        console.log("s3.upload: err: return res.status(500) ", err);
         return res.status(500);
       }
       console.log("s3.upload: success: return data ", data);
