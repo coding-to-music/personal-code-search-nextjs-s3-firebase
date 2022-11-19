@@ -6,9 +6,9 @@ Works: Saves to mongodb and uploads to S3, however does not display the images i
 
 https://github.com/coding-to-music/personal-code-search-nextjs-s3-firebase
 
-https://personal-code-search.herokuapp.com
+https://personal-code-search-nextjs-s3-firebase.vercel.app
 
-https://personal-code-search.herokuapp.com/api
+https://personal-code-search-nextjs-s3-firebase.vercel.app/api
 
 From / By https://github.com/Abdulsametileri/personal-code-search-nextjs
 
