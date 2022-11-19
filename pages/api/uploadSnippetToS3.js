@@ -48,12 +48,12 @@ export default async (req, res) => {
     );
 
     console.log("s3.upload about to ");
+    // ACL: "public-read",
+    // Bucket: process.env.PCS_AWS_ACCESS_KEY,
+    // Bucket: process.env.PCS_AWS_SECRET_KEY,
 
     s3.upload({
       Bucket: process.env.PCS_AWS_BUCKET_NAME,
-      Bucket: process.env.PCS_AWS_ACCESS_KEY,
-      Bucket: process.env.PCS_AWS_SECRET_KEY,
-      ACL: "public-read",
       Key: files.file.name,
       Body: file,
       ContentType: files.file.type,
