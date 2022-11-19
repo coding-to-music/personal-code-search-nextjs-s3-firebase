@@ -1,5 +1,7 @@
 # personal-code-search-nextjs-s3-firebase
 
+Works: Saves to mongodb and uploads to S3, however does not display the images in the list. Requires S3 bucket to be open and does not use access-key or secret-key.
+
 # 🚀 Categorize all your favorite code snippets and search them with predefined tags on your own. 🚀
 
 https://github.com/coding-to-music/personal-code-search-nextjs-s3-firebase
