@@ -6,6 +6,10 @@ Works: Saves to mongodb and uploads to S3, however does not display the images i
 
 https://github.com/coding-to-music/personal-code-search-nextjs-s3-firebase
 
+https://personal-code-search.herokuapp.com
+
+https://personal-code-search.herokuapp.com/api
+
 From / By https://github.com/Abdulsametileri/personal-code-search-nextjs
 
 https://personal-code-search.herokuapp.com/
