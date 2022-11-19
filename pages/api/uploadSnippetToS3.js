@@ -34,20 +34,20 @@ export default async (req, res) => {
 
     const file = fs.readFileSync(files.file.path);
 
-    console.log(
-      "uploadSnippetToS3 about to s3.upload PCS_AWS_BUCKET_NAME",
-      process.env.PCS_AWS_BUCKET_NAME
-    );
-    console.log(
-      "uploadSnippetToS3 about to s3.upload files.file.name",
-      files.file.name
-    );
-    console.log(
-      "uploadSnippetToS3 about to s3.upload files.file.type",
-      files.file.type
-    );
+    // console.log(
+    //   "uploadSnippetToS3 about to s3.upload PCS_AWS_BUCKET_NAME",
+    //   process.env.PCS_AWS_BUCKET_NAME
+    // );
+    // console.log(
+    //   "uploadSnippetToS3 about to s3.upload files.file.name",
+    //   files.file.name
+    // );
+    // console.log(
+    //   "uploadSnippetToS3 about to s3.upload files.file.type",
+    //   files.file.type
+    // );
 
-    console.log("s3.upload about to ");
+    // console.log("s3.upload about to ");
     // ACL: "public-read",
     // Bucket: process.env.PCS_AWS_ACCESS_KEY,
     // Bucket: process.env.PCS_AWS_SECRET_KEY,
