@@ -19,10 +19,10 @@ const SnippetItem = ({snippet}) => {
               {snippet.rawText}
             </p>}
             {snippet.imageUrl && <Link
-              href={'https://d1kvz0r50h32xh.cloudfront.net' + snippet.imageUrl.substr(snippet.imageUrl.lastIndexOf("/"))}>
+              href={'https://d3cvirzyv3u7gw.cloudfront.net' + snippet.imageUrl.substr(snippet.imageUrl.lastIndexOf("/"))}>
               <a target="_blank">
                 <Card.Img variant="bottom"
-                          src={'https://d1kvz0r50h32xh.cloudfront.net' + snippet.imageUrl.substr(snippet.imageUrl.lastIndexOf("/"))}/>
+                          src={'https://d3cvirzyv3u7gw.cloudfront.net' + snippet.imageUrl.substr(snippet.imageUrl.lastIndexOf("/"))}/>
               </a>
             </Link>}
           </Card.Body>
