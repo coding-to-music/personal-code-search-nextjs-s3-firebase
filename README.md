@@ -2,8 +2,6 @@
 
 Works: Saves to mongodb and uploads to S3, displays the images in the list via AWS Cloudfront. 
 
-S3 upload Works locally but not via Vercel
-
 # 🚀 Categorize all your favorite code snippets and search them with predefined tags on your own. 🚀
 
 https://github.com/coding-to-music/personal-code-search-nextjs-s3-firebase
