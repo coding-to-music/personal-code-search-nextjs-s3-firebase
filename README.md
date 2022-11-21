@@ -1,6 +1,6 @@
 # personal-code-search-nextjs-s3-firebase
 
-Works: Saves to mongodb and uploads to S3, however does not display the images in the list, shows a placeholder. Requires S3 bucket to be open and does not use access-key or secret-key.
+Works: Saves to mongodb and uploads to S3, displays the images in the list via AWS Cloudfront. 
 
 S3 upload Works locally but not via Vercel
 
