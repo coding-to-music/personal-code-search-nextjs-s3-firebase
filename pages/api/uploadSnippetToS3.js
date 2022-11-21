@@ -22,7 +22,13 @@ export default async (req, res) => {
     region: process.env.PCS_AWS_REGION,
     signatureVersion: "v4",
   });
-  const s3 = new aws.S3();
+
+  // const s3 = new aws.S3();
+
+  const s3 = new AWS.S3({
+    accessKeyId: process.env.PCS_AWS_ACCESS_KEY,
+    secretAccessKey: process.env.PCS_AWS_SECRET_KEY,
+  });
 
   // console.log("uploadSnippetToS3: s3", s3);
 
