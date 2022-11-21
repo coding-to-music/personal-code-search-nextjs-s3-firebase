@@ -25,7 +25,7 @@ export default async (req, res) => {
 
   // const s3 = new aws.S3();
 
-  const s3 = new AWS.S3({
+  const s3 = new aws.S3({
     accessKeyId: process.env.PCS_AWS_ACCESS_KEY,
     secretAccessKey: process.env.PCS_AWS_SECRET_KEY,
   });
