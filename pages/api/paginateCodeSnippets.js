@@ -4,7 +4,7 @@ import dbConnect from "@/utils/dbConnect";
 export default async (req, res) => {
   const keyword = req.query.keyword;
   const curPage = req.query.page || 1
-  const perPage = 5
+  const perPage = 20
 
   try {
     await dbConnect()
