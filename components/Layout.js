@@ -21,7 +21,7 @@ const LayoutComponent = ({ children }) => {
       <Head>
         <Meta />
         <link rel='icon' href='/favicon.ico' />
-        <title>Interview Preperation</title>
+        <title>Twitter Clone</title>
         <link rel="stylesheet" type="text/css" href="/nprogress.css" />
       </Head>
 
